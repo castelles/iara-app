@@ -17,4 +17,9 @@ object DimensionFlavors {
     const val homolog = "dev"
     const val homologAppSuffix = ".dev"
     const val homologVersionNameSuffix = "-dev"
+
+    // PRODUCTION
+    const val release = "prod"
+    const val releaseAppSuffix = ""
+    const val releaseVersionNameSuffix = ""
 }

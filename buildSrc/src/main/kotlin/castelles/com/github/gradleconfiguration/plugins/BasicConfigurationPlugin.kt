@@ -75,6 +75,7 @@ open class BasicConfigurationPlugin: Plugin<Project> {
         flavorDimensions(DimensionFlavors.dimensionEnv)
         productFlavors {
             create(DimensionFlavors.dev) { createDevFlavor() }
+            create(DimensionFlavors.release) { createRelease() }
         }
     }
 
@@ -83,7 +84,15 @@ open class BasicConfigurationPlugin: Plugin<Project> {
         versionNameSuffix = DimensionFlavors.devVersionNameSuffix
 
         resValue(STRING_LOWER, APP_NAME, "${ApplicationVersion.appName}$versionNameSuffix")
-        buildConfigField(STRING, BASE_URL, "\"https://api.github.com/\"")
+        buildConfigField(STRING, BASE_URL, "\"http://localhost:3000/\"")
+    }
+
+    private fun ProductFlavor.createRelease() {
+        dimension = DimensionFlavors.dimensionEnv
+        versionNameSuffix = DimensionFlavors.releaseVersionNameSuffix
+
+        resValue(STRING_LOWER, APP_NAME, ApplicationVersion.appName)
+        buildConfigField(STRING, BASE_URL, "\"https://iara-app.azurewebsites.net/\"")
     }
 
     companion object {
