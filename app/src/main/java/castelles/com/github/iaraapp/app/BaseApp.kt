@@ -1,9 +1,9 @@
-package castelles.com.github.androidbaseproject.app
+package castelles.com.github.iaraapp.app
 
 import android.app.Application
-import castelles.com.github.androidbaseproject.module.dataSourceModules
-import castelles.com.github.androidbaseproject.module.repositoryModules
-import castelles.com.github.androidbaseproject.module.viewModelModules
+import castelles.com.github.iaraapp.module.dataSourceModules
+import castelles.com.github.iaraapp.module.repositoryModules
+import castelles.com.github.iaraapp.module.viewModelModules
 import castelles.com.github.api.di.networkModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin

@@ -9,6 +9,7 @@ class LibsPlugin: BasicConfigurationPlugin() {
 
     override fun apply(target: Project) {
         super.apply(target)
+
         applyStandardDependencies(target)
     }
 

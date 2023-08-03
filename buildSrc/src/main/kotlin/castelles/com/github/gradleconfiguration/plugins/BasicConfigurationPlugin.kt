@@ -19,7 +19,6 @@ open class BasicConfigurationPlugin: Plugin<Project> {
 
     override fun apply(target: Project) {
         target.plugins.apply(kotlinAndroid)
-
         val extension = target.extensions.getByName("android")
         if (extension is BaseExtension) {
             extension.apply {
@@ -33,7 +32,7 @@ open class BasicConfigurationPlugin: Plugin<Project> {
 
     private fun BaseExtension.applyAndroidSettings() {
         compileSdkVersion(AndroidSettings.compileSdkVersion)
-        namespace = "castelles.com.github.androidbaseproject"
+        namespace = "castelles.com.github.iaraapp"
 //        buildToolsVersion(AndroidSettings.buildToolsVersion)
         defaultConfig {
             minSdk = AndroidSettings.minSdkVersion

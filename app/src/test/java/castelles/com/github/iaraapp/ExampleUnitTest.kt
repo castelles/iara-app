@@ -1,4 +1,4 @@
-package castelles.com.github.androidbaseproject
+package castelles.com.github.iaraapp
 
 import org.junit.Test
 

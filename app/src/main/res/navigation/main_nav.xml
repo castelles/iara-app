@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="castelles.com.github.androidbaseproject.ui.HomeFragment"
+        android:name="castelles.com.github.iaraapp.ui.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"/>
 </navigation>

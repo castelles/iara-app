@@ -1,4 +1,4 @@
-package castelles.com.github.androidbaseproject.viewmodel.state
+package castelles.com.github.iaraapp.viewmodel.state
 
 import castelles.com.github.api.utils.NetworkFetcher
 

@@ -2,6 +2,8 @@ import castelles.com.github.gradleconfiguration.extensions.androidTestImplementa
 import castelles.com.github.gradleconfiguration.extensions.implementationAll
 import castelles.com.github.gradleconfiguration.libs.Compose
 import castelles.com.github.gradleconfiguration.libs.Jetpack
+import castelles.com.github.gradleconfiguration.libs.Firebase
+import castelles.com.github.gradleconfiguration.libs.Test
 import castelles.com.github.gradleconfiguration.libs.Utils
 
 plugins {
@@ -9,6 +11,8 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("android-standard-settings")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -24,5 +28,9 @@ dependencies {
     implementationAll(Jetpack.list)
     implementationAll(Utils.list)
     androidTestImplementationAll(Compose.AndroidTest.list)
-    androidTestImplementationAll(castelles.com.github.gradleconfiguration.libs.Test.AndroidTest.list)
+    androidTestImplementationAll(Test.AndroidTest.list)
+
+    implementation(platform(Firebase.bom))
+    implementationAll(Firebase.list)
+
 }

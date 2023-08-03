@@ -1,6 +1,6 @@
-package castelles.com.github.androidbaseproject.module
+package castelles.com.github.iaraapp.module
 
-import castelles.com.github.androidbaseproject.viewmodel.UserViewModel
+import castelles.com.github.iaraapp.viewmodel.UserViewModel
 import castelles.com.github.api.datasource.UserDataSource
 import castelles.com.github.api.repository.UserRepositoryImpl
 import castelles.com.github.api.repository.contract.UserRepository

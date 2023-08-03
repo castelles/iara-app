@@ -6,5 +6,5 @@ object ApplicationVersion {
     private const val fix = "0"
     private const val hotFix = "0"
     const val versionName = "$release.$feature.$fix.$hotFix"
-    const val appName = "Base"
+    const val appName = "Iara"
 }
