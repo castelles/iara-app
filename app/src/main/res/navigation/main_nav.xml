@@ -9,5 +9,13 @@
         android:id="@+id/homeFragment"
         android:name="castelles.com.github.iaraapp.ui.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_placeFragment"
+            app:destination="@id/placeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeFragment"
+        android:name="castelles.com.github.iaraapp.ui.PlaceFragment"
+        android:label="PlaceFragment" />
 </navigation>

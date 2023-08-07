@@ -2,6 +2,7 @@ import Build_gradle.InternalDep.buildGradle
 import Build_gradle.InternalDep.crashlyticsFirebase
 import Build_gradle.InternalDep.googleServices
 import Build_gradle.InternalDep.kotlinGradle
+import Build_gradle.InternalDep.mapsPlugin
 import Build_gradle.InternalDep.navigationPlugin
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
@@ -16,6 +17,7 @@ object InternalDep {
     const val crashlyticsFirebase = "com.google.firebase:firebase-crashlytics-gradle:2.9.7"
     const val navigationPlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
     const val quadrant_gradle_plugin = "gradle.plugin.com.gaelmarhic:quadrant:1.5"
+    const val mapsPlugin = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:2.0.1"
 }
 
 plugins {
@@ -34,6 +36,7 @@ gradlePlugin {
 }
 
 repositories {
+    gradlePluginPortal()
     google()
     mavenCentral()
     maven(url = "https://plugins.gradle.org/m2/")

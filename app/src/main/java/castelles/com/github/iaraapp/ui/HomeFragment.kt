@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL
@@ -90,7 +91,7 @@ class HomeFragment: Fragment() {
             ),
         )
         val adapt = HomeMainAdapter {
-            throw RuntimeException("Test crash: Main Recycler")
+            findNavController().navigate(R.id.action_homeFragment_to_placeFragment)
         }.also { it.submitList(list) }
         binding.rcvHome.apply {
             layoutManager = LinearLayoutManager(requireContext(), HORIZONTAL, false)
