@@ -27,6 +27,7 @@ class CategoryAdapter(
     ): RecyclerView.ViewHolder(binding.root)
     {
         fun bind(item: Category) {
+            binding.imvIcon.setImageDrawable(item.imageIcon)
             binding.txvName.text = item.name
         }
     }

@@ -80,13 +80,13 @@ class HomeFragment: Fragment() {
             ),
             Place(
                 "1235",
-                "Cachoeira pedra furada 1",
-                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.img_pedra_furada, null)!!
+                "Gruta da Judeia",
+                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.imv_gruta, null)!!
             ),
             Place(
                 "1236",
-                "Cachoeira pedra furada 2",
-                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.img_pedra_furada, null)!!
+                "Cachoeira de Iracema",
+                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.imv_iracema, null)!!
 
             ),
         )
@@ -106,28 +106,33 @@ class HomeFragment: Fragment() {
             ),
             Category(
                 "133",
-                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_water, null)!!,
+                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_theater, null)!!,
                 "Teatros",
             ),
             Category(
                 "12344",
-                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_water, null)!!,
+                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_museum, null)!!,
                 "Museus",
             ),
             Category(
                 "123442",
-                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_water, null)!!,
+                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_fluct_houses, null)!!,
                 "Flutuantes",
             ),
             Category(
                 "123443422",
-                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_water, null)!!,
+                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_culture, null)!!,
                 "Eventos culturais",
             ),
             Category(
                 "1234434342",
-                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_water, null)!!,
+                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_night, null)!!,
                 "Casas noturnas",
+            ),
+            Category(
+                "1234434342",
+                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_restaurant, null)!!,
+                "Restaurantes",
             )
         )
         val divider = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)

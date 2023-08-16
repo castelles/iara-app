@@ -33,4 +33,10 @@
         <item name="android:fontFamily">@font/roboto_bold</item>
         <item name="android:textSize">14sp</item>
     </style>
+
+    <style name="CustomDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@drawable/layer_background</item>
+        <item name="android:backgroundDimAmount">0.9</item> <!-- Adjust the dim amount (0 to 1) as needed -->
+    </style>
+
 </resources>

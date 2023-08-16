@@ -14,6 +14,7 @@ plugins {
     id("android-standard-settings")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {

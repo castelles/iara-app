@@ -2,4 +2,5 @@
 <!--    <string name="app_name">androidbaseproject</string>-->
     <string name="str_fetch">Fetch</string>
     <string name="most_visited">Mais Visitados</string>
+    <string name="str_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper.</string>
 </resources>

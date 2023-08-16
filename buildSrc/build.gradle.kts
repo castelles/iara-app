@@ -17,7 +17,7 @@ object InternalDep {
     const val crashlyticsFirebase = "com.google.firebase:firebase-crashlytics-gradle:2.9.7"
     const val navigationPlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
     const val quadrant_gradle_plugin = "gradle.plugin.com.gaelmarhic:quadrant:1.5"
-    const val mapsPlugin = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:2.0.1"
+    const val mapsPlugin = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1"
 }
 
 plugins {
@@ -50,6 +50,7 @@ dependencies {
     implementation(googleServices)
     implementation(Build_gradle.InternalDep.crashlyticsFirebase)
     implementation(navigationPlugin)
+    implementation(Build_gradle.InternalDep.mapsPlugin)
     implementation(InternalDep.quadrant_gradle_plugin)
 }
 val compileKotlin: KotlinCompile by tasks
