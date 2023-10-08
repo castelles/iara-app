@@ -6,17 +6,20 @@ object Android: DependencyContainer {
     private const val appcompatVersion = "1.3.1"
     private const val materialVersion = "1.4.0"
     private const val constraintLayoutVersion = "2.0.4"
+    private const val googlePlayServicesVersion = "20.7.0"
 
     private const val coreKtx = "androidx.core:core-ktx:$coreKtxVersion"
     private const val appCompat = "androidx.appcompat:appcompat:$appcompatVersion"
     private const val materialDesign = "com.google.android.material:material:$materialVersion"
     private const val constraintLayout = "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    private const val googlePlayServices = "com.google.android.gms:play-services-auth:$googlePlayServicesVersion"
 
     override val list: List<String>
         get() = listOf(
             coreKtx,
             appCompat,
             materialDesign,
-            constraintLayout
+            constraintLayout,
+            googlePlayServices
         )
 }

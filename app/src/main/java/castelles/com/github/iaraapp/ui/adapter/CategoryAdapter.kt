@@ -9,7 +9,7 @@ import castelles.com.github.iaraapp.model.Category
 import castelles.com.github.iaraapp.databinding.ItemCategoryHomeBinding
 
 class CategoryAdapter(
-    private val onClick: (Category) -> Unit
+    private val onClick: Action<Category>
 ): ListAdapter<Category, CategoryAdapter.ViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
@@ -29,6 +29,7 @@ class CategoryAdapter(
         fun bind(item: Category) {
             binding.imvIcon.setImageDrawable(item.imageIcon)
             binding.txvName.text = item.name
+            binding.root.setOnClickListener { onClick.invoke(item) }
         }
     }
 

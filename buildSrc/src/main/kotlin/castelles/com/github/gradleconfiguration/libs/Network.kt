@@ -22,7 +22,7 @@ object Network: DependencyContainer {
             moshiConverter,
             gson,
             loggingInterceptor,
-            okHttp
+            okHttp,
         )
 
 }

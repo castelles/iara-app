@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -13,13 +13,18 @@
         android:background="@color/off_white">
 
         <include
+            android:id="@+id/incld_action_bar"
+            layout="@layout/action_bar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
             android:id="@+id/incld_mosaic"
             layout="@layout/image_place_mosaic"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/incld_action_bar" />
 
         <TextView
             android:id="@+id/txv_place_title"
@@ -54,6 +59,7 @@
             app:layout_constraintTop_toBottomOf="@id/txv_address" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cdv_map"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginHorizontal="16dp"
@@ -73,24 +79,27 @@
 
         </androidx.cardview.widget.CardView>
 
+        <ImageView
+            android:id="@+id/imv_info"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintEnd_toEndOf="@id/cdv_map"
+            app:layout_constraintTop_toTopOf="@id/cdv_map"
+            app:tint="@color/carolina_blue" />
 
-
-        <!--        <androidx.cardview.widget.CardView-->
-        <!--            android:layout_width="225dp"-->
-        <!--            android:layout_height="300dp"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            app:cardCornerRadius="8dp"-->
-        <!--            app:cardElevation="8dp"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/txv_address">-->
-
-        <!--            <ImageView-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent"-->
-        <!--                android:src="@drawable/img_pedra_furada" />-->
-
-        <!--        </androidx.cardview.widget.CardView>-->
+        <TextView
+            android:id="@+id/txv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:background="#9CF68D6B"
+            android:padding="8dp"
+            android:text="Clique no pin em destaque para opções de encontrar rotas ou abrir no google maps."
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/imv_info"
+            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

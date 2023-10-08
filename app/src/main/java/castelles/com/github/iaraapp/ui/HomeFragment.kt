@@ -91,7 +91,7 @@ class HomeFragment: Fragment() {
             ),
         )
         val adapt = HomeMainAdapter {
-            findNavController().navigate(R.id.action_homeFragment_to_placeFragment)
+            findNavController().navigate(R.id.action_main_to_place)
         }.also { it.submitList(list) }
         binding.rcvHome.apply {
             layoutManager = LinearLayoutManager(requireContext(), HORIZONTAL, false)
@@ -138,8 +138,7 @@ class HomeFragment: Fragment() {
         val divider = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
         divider.setDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.standard_divider)!!)
         val adatCategories = CategoryAdapter {
-            throw RuntimeException("Test crash: categories Recycler")
-
+            findNavController().navigate(R.id.action_main_to_places)
         }.also { it.submitList(listCategory) }
         binding.rcvCategory.apply {
             layoutManager = LinearLayoutManager(requireContext(), VERTICAL, false)

@@ -3,19 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/homeFragment">
-
+    app:startDestination="@id/main">
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/main"
         android:name="castelles.com.github.iaraapp.ui.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_homeFragment_to_placeFragment"
-            app:destination="@id/placeFragment" />
+            android:id="@+id/action_main_to_places"
+            app:destination="@id/places"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_main_to_place"
+            app:destination="@id/place"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
-        android:id="@+id/placeFragment"
+        android:id="@+id/place"
         android:name="castelles.com.github.iaraapp.ui.PlaceFragment"
-        android:label="PlaceFragment" />
+        android:label="PlaceFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/places"
+        android:name="castelles.com.github.iaraapp.ui.PlaceListFragment"
+        android:label="PlaceListFragment" >
+        <action
+            android:id="@+id/action_places_to_place"
+            app:destination="@id/place"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
 </navigation>

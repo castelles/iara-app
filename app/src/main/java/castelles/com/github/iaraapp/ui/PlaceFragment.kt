@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import castelles.com.github.iaraapp.R
 import castelles.com.github.iaraapp.databinding.FragmentPlaceBinding
 import castelles.com.github.iaraapp.ui.PlaceDetailsDialog.Companion.TAG
@@ -48,6 +49,14 @@ class PlaceFragment: Fragment(){
         binding.txvKnowMore.setOnClickListener {
             val dialog = PlaceDetailsDialog()
             dialog.show(childFragmentManager, TAG)
+        }
+        binding.incldActionBar.imvBack.setOnClickListener { findNavController().popBackStack() }
+        binding.imvInfo.setOnClickListener {
+            MainScope().launch {
+                binding.txvInfo.visibility = View.VISIBLE
+                delay(4.seconds)
+                binding.txvInfo.visibility = View.GONE
+            }
         }
     }
 

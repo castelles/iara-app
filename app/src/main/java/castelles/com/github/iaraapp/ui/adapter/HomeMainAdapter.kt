@@ -9,7 +9,7 @@ import castelles.com.github.iaraapp.model.Place
 import castelles.com.github.iaraapp.databinding.ItemPlaceBinding
 
 class HomeMainAdapter(
-    private val onClick: (Place) -> Unit
+    private val onClick: Action<Place>
 ): ListAdapter<Place, HomeMainAdapter.ViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =

@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:text="@string/most_visited"
+            android:text="@string/destaque"
             app:layout_constraintTop_toBottomOf="@id/ctl_header" />
 
         <androidx.recyclerview.widget.RecyclerView

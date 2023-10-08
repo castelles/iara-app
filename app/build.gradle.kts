@@ -27,11 +27,13 @@ dependencies {
 
     implementation(project(":api"))
     implementation(project(":designsystem"))
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementationAll(Jetpack.list)
     implementationAll(Utils.list)
     implementationAll(GoogleMaps.list)
     androidTestImplementationAll(Compose.AndroidTest.list)
     androidTestImplementationAll(Test.AndroidTest.list)
+    kapt ("com.github.bumptech.glide:compiler:4.16.0")
 
     implementation(platform(Firebase.bom))
     implementationAll(Firebase.list)
