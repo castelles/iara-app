@@ -93,6 +93,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private fun NavigationView.setDrawerHeaderLayout(account: GoogleSignInAccount?) {
         val header = getHeaderView(0)
+        setAccountLayout(account, header)
+    }
+
+    private fun NavigationView.setAccountLayout(
+        account: GoogleSignInAccount?,
+        header: View
+    ) {
         account?.let { acc ->
             header.findViewById<TextView>(R.id.txv_user_name).text = acc.displayName
             val userImageView = header.findViewById<ImageView>(R.id.imv_user)
@@ -100,7 +107,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                 .asBitmap()
                 .load(acc.photoUrl.toString())
                 .placeholder(R.drawable.account_circle_40px)
-                .into(object: CustomTarget<Bitmap>() {
+                .into(object : CustomTarget<Bitmap>() {
                     override fun onResourceReady(
                         resource: Bitmap,
                         transition: Transition<in Bitmap>?
