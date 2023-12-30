@@ -1,16 +1,41 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Androidbaseproject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Androidbaseproject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/iceberg_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/natural_blue</item>
+        <item name="colorSecondaryVariant">@color/indigo_blue</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">#3C83AF</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="IaraTextView">
+        <item name="android:textColor">#3C83AF</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="IaraTextView.Title">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="IaraTextView.Category">
+        <item name="android:textColor">#212b36</item>
+    </style>
+
+    <style name="IaraPrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CustomDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@drawable/layer_background</item>
+        <item name="android:backgroundDimAmount">0.9</item> <!-- Adjust the dim amount (0 to 1) as needed -->
     </style>
 </resources>

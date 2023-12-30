@@ -5,6 +5,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.Protocol
 import okhttp3.Response
 import okhttp3.ResponseBody
+import okhttp3.ResponseBody.Companion.toResponseBody
 
 class AuthInterceptor(private val token: String?): Interceptor {
 
@@ -32,7 +33,7 @@ class AuthInterceptor(private val token: String?): Interceptor {
             .code(500)
             .request(chain.request())
             .protocol(Protocol.HTTP_2)
-            .body(ResponseBody.create(type.toMediaType(), error))
+            .body(error.toResponseBody(type.toMediaType()))
             .message(error).build()
     }
 

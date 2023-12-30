@@ -11,11 +11,14 @@ object Utils: DependencyContainer {
     private const val glideVersion = "4.16.0"
     private const val glide = "com.github.bumptech.glide:glide:$glideVersion"
 
+    private const val circleImageViewVersion = "3.1.0"
+    private const val circleImageView = "de.hdodenhof:circleimageview:$circleImageViewVersion"
 
     override val list: List<String>
         get() = listOf(
             dimensSdp,
             lottie,
-            glide
+            glide,
+            circleImageView
         )
 }

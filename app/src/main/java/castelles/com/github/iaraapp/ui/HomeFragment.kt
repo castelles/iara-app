@@ -9,6 +9,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL
 import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
@@ -133,7 +134,12 @@ class HomeFragment: Fragment() {
                 "1234434342",
                 ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_restaurant, null)!!,
                 "Restaurantes",
-            )
+            ),
+            Category(
+                "1234434342",
+                ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_restaurant, null)!!,
+                "Restaurantes",
+            ),
         )
         val divider = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
         divider.setDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.standard_divider)!!)
@@ -141,8 +147,6 @@ class HomeFragment: Fragment() {
             findNavController().navigate(R.id.action_main_to_places)
         }.also { it.submitList(listCategory) }
         binding.rcvCategory.apply {
-            layoutManager = LinearLayoutManager(requireContext(), VERTICAL, false)
-            addItemDecoration(divider)
             this.adapter = adatCategories
         }
     }

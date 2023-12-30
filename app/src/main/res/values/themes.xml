@@ -10,12 +10,12 @@
         <item name="colorSecondaryVariant">@color/indigo_blue</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:statusBarColor">#3C83AF</item>
         <!-- Customize your theme here. -->
     </style>
 
     <style name="IaraTextView">
-        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textColor">#3C83AF</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textSize">14sp</item>
     </style>
