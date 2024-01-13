@@ -11,7 +11,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/off_white">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_place_image"
@@ -41,6 +42,7 @@
             android:layout_marginVertical="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="12dp"
+            android:background="@color/off_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/cv_place_image"
@@ -48,7 +50,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/off_white">
 
                 <ImageView
                     android:id="@+id/imv_favorite"
